@@ -3,14 +3,18 @@ Sentiment Analysis of Electrolux Product Reviews
 Goal  
 ----
 Building a sentiment classifier on product reviews of Electrolux. 
+
 Software used
 -------------
 * Crawler – manual
 * XML Processor – REGEX
-* Tokenizer – Apache Lucene, WEKA stringtowordvector filter. o Classifier – WEKA, libSVM
+* Tokenizer – Apache Lucene, WEKA stringtowordvector filter. 
+* Classifier – WEKA, libSVM
+
 Data set
 --------
 1024 reviews from Amazon.com for Electrolux home appliances.
+
 Steps taken for classification
 ------------------------------
 1. Stored the URLs of the review pages for the 5 Electrolux products in a text file, which is read one at a time to be crawled for extracting the reviews.
