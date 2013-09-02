@@ -1,0 +1,26 @@
+Sentiment Analysis
+==================
+
+1. Crawler.java :- Crawl the web for the reviews
+Review.java :- class with review attributes
+2. XMLGenerator.java :- Generate an XML document with the items
+3. ParseXML.java :- Parse the XML document using XPath, create objects for each review
+4. Indexer.java :- Index the reviews
+5. Classification.java :- Classifying the data.
+
+>> Tokenize and vectorize each review (labeled & unlabeled) using your favorite term weighting scheme, e.g., TF.IDF
+
+>> Train a 3-class (-1, 0, 1) classifier model on the labeled dataset. You may optionally do 10-fold cross validation.
+
+>> Classify the the unlabeled dataset using your trained classifier model, remember to skip over the human-labeled
+reviews, which has confidence=1 and existing polarity={-1,0,1}. For each classified review, you must indicate both
+the polarity and confidence score (generated from the classifier model). Note that you should manually check that the
+machine-labeled confidence score is always less than 1, so as to differentiate the machine classified docs from the
+human-labeled docs.
+
+>> Update your single XML file created in step 4 with your machine classified result by appending to each unlabeled
+review the two additional fields of <polarity> and <confidence>.
+
+>> Randomly inspect a few machine classified result to get a feel of the accuracy of your results. If accuracy is low,
+repeat step 8 with different classifier parameters or human-label more reviews in step 6 (you may want to label the
+same number of classes, e.g., 30 positive, 30 negative, 30 neutral, to achieve a balanced training set).
